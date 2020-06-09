@@ -23,6 +23,7 @@ namespace BalancedBracketsNS
          * parameter str - to be validated
          * returns true if balanced, false otherwise
         */
+        
         public static bool HasBalancedBrackets(String str)
         {
             int brackets = 0;
@@ -35,6 +36,10 @@ namespace BalancedBracketsNS
                 else if (ch == ']')
                 {
                     brackets--;
+                }
+                if (brackets < 0)
+                {
+                    return false;
                 }
             }
             return brackets == 0;
